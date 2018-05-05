@@ -1,6 +1,8 @@
 const API_KEY = 'd3d9c0ceef5e6d36799dfcc2c5aa3c8d';
 
 export function addName(name){
+  console.log("ACTION");
+  console.log(name);
   return{
     type: 'ADD_NAME',
     payload: name

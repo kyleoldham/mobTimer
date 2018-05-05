@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { addName } from '../actions/index';
+import { bindActionCreators } from 'redux';
 
 class NameBar extends Component {
   constructor(props) {
@@ -34,7 +37,12 @@ class NameBar extends Component {
           onChange={this.onInputChange}
         />
         <span className="input-group-btn">
-          <button type="submit" className="btn btn-primary">Add Name</button>
+          <button 
+            type="submit" 
+            className="btn btn-primary" 
+            onClick={() => {this.props.addName(this.state.term)}}>
+              Add Name
+          </button>
           <button type="delete" className="btn btn-secondary">Remove Name</button>
         </span>
       </form>
@@ -42,4 +50,12 @@ class NameBar extends Component {
   }
 }
 
-export default NameBar;
+function mapStateToProps(state){
+  return state;
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ addName: addName }, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(NameBar);
