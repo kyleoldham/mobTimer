@@ -1,7 +1,8 @@
 export default function (state = null, action) {
+  console.log("BEFORE THE STORM");
   switch(action.type){
 
-    case "ADD_NAME":
+    case 'ADD_NAME':
       
       console.log("REDUCE");
       return {

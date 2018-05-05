@@ -1,10 +1,9 @@
 import { combineReducers, createStore } from 'redux';
 import nameReducer from './reducer_name';
-import AddNameReducer from './reducer_add_name';
+import addNameReducer from './reducer_add_name';
 
 const rootReducer = combineReducers({
-  names: nameReducer,
-
+  addnames: addNameReducer
 });
 
 const initialState = {
@@ -13,4 +12,4 @@ const initialState = {
 
 const store = createStore(rootReducer, initialState);
 
-export default rootReducer;
+export default store;

@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 
 class NameList extends Component {
   renderNameList(){
+    if (!this.props.names)
+      return <div></div>
     return this.props.names.map((name) => {
       return (
         <li key={name.name}

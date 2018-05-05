@@ -1,6 +1,6 @@
-export default function() {
-  return [
-    {name: "Kyle"},
-    {name: "Jourdan"}
-  ];
+export default function(state = null) {
+    return {
+      ...state,
+      names: [ { name: 'Jeff' }, { name: 'rob' } ]
+  };
 }
