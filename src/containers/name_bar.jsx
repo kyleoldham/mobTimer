@@ -18,7 +18,6 @@ class NameBar extends Component {
   onInputChange(event) {
     
    this.setState({ term: event.target.value }); 
-    console.log(this.state.term);
   }
   
   onFormSubmit(event) {

@@ -5,6 +5,9 @@ class NameList extends Component {
   renderNameList(){
     if (!this.props.names)
       return <div></div>
+        
+    console.log(this.props.names);
+        
     return this.props.names.map((name) => {
       return (
         <li key={name.name}
@@ -27,7 +30,7 @@ class NameList extends Component {
 
 function mapStateToProps(state){
   return {
-    names: state.names
+    names: state.addnames
   };
 }
 
