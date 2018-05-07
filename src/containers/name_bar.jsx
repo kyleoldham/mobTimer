@@ -16,10 +16,9 @@ class NameBar extends Component {
   }
 
   onInputChange(event) {
-    
    this.setState({ term: event.target.value }); 
   }
-  
+
   onFormSubmit(event) {
     event.preventDefault();
   }
@@ -42,7 +41,6 @@ class NameBar extends Component {
             onClick={() => {this.props.addName(this.state.term)}}>
               Add Name
           </button>
-          <button type="delete" className="btn btn-secondary">Remove Name</button>
         </span>
       </form>
     );

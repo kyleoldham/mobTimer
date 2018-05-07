@@ -8,10 +8,12 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <Timer />
+        <div align="middle">
         <Time />
-        <NameList />
+        </div>
+      <br />
         <NameBar />
+        <NameList />
       </div>
     );
   }

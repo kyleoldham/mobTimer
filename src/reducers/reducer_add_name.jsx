@@ -4,7 +4,7 @@ export default function (state=[], action) {
       return state.filter(name => name.name !== action.payload);
 
     case 'ADD_NAME':
-      return [ { name: action.payload}, ...state ]; 
+      return [ ...state, { name: action.payload} ]; 
   }
   return state;
 }
