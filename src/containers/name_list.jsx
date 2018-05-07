@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { removeName } from '../actions/index';
+import { bindActionCreators } from 'redux';
 
 class NameList extends Component {
   renderNameList(){
@@ -14,6 +16,10 @@ class NameList extends Component {
             className="list-group-item"
         >
           {name.name}
+        <button className="btn btn-primary"
+              onClick={() => this.props.removeName(name.name)}>
+          Remove
+         </button>
         </li>
       );
     });
@@ -34,4 +40,8 @@ function mapStateToProps(state){
   };
 }
 
-export default connect(mapStateToProps)(NameList);
+function mapDispatchToProps(dispatch){
+  return bindActionCreators({ removeName } ,dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(NameList);
