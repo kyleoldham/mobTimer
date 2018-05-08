@@ -9,7 +9,7 @@ export default class App extends Component {
     return (
       <div>
         <div align="middle">
-        <Time />
+          <Timer />
         </div>
       <br />
         <NameBar />
